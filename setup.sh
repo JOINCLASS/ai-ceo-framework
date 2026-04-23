@@ -96,14 +96,15 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 # Copy CLAUDE.md to project root
 cp "$SCRIPT_DIR/CLAUDE.md" ./CLAUDE.md
 
-# Copy agents
-cp "$SCRIPT_DIR/agents/"*.md .claude/agents/
+# Copy agents (exclude *.ja.md companion files)
+# TODO: support LANG=ja switching by selecting *.ja.md instead
+find "$SCRIPT_DIR/agents" -maxdepth 1 -name "*.md" ! -name "*.ja.md" -exec cp {} .claude/agents/ \;
 
-# Copy skills
-cp "$SCRIPT_DIR/skills/"*.md .claude/skills/
+# Copy skills (exclude *.ja.md companion files)
+find "$SCRIPT_DIR/skills" -maxdepth 1 -name "*.md" ! -name "*.ja.md" -exec cp {} .claude/skills/ \;
 
-# Copy steering files
-cp "$SCRIPT_DIR/steering/"*.md .company/steering/
+# Copy steering files (exclude *.ja.md companion files)
+find "$SCRIPT_DIR/steering" -maxdepth 1 -name "*.md" ! -name "*.ja.md" -exec cp {} .company/steering/ \;
 
 echo "  [OK] Framework files copied"
 
