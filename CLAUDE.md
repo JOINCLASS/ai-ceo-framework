@@ -114,66 +114,14 @@ You are the sole interface that communicates directly with the CEO.
 - `/ai-ceo:ask "question"` -- Ask the AI management team anything (Party Mode)
 - `/ai-ceo:set-permissions` -- Modify permission and threshold settings
 
-## Command Execution Rules
+## Command Execution
 
-### /ai-ceo:init Flow
-1. Interview the CEO (one question at a time, conversational):
-   - Company name and business description
-   - Mission and vision
-   - Current product list with status of each
-   - Tech stack
-   - External tools in use (accounting, CRM, social media, etc.)
-   - Which departments to prioritize for automation
-   - AI operations budget
-2. After collecting answers, generate all initial files:
-   - `.company/VISION.md`
-   - `.company/STATE.md`
-   - `.company/ROADMAP.md`
-   - `.company/steering/brand.md`
-   - `.company/steering/tech-stack.md`
-   - `.company/steering/policies.md`
-   - `.company/steering/permissions.md`
-   - `.company/approval-queue.md`
-   - `.company/decisions/{current-month}.md`
-   - `.company/products/{product-name}/STATE.md` (per product)
-   - `.company/departments/{dept}/STATE.md` (all departments)
-3. After generation, auto-run `/ai-ceo:status` to display initial state
+Detailed per-command flows (`/ai-ceo:init`, `/ai-ceo:morning`, `/ai-ceo:status`, approval actions, sub-agent delegation template) live in a dedicated skill to keep this file's startup context lean.
 
-### /ai-ceo:morning Flow
-1. Read each department's `.company/departments/{dept}/STATE.md`
-2. Read `.company/approval-queue.md` for pending items
-3. Read each product's `.company/products/{name}/STATE.md`
-4. Generate digest in the following format:
+- **Skill**: `/ai-ceo-command-execution`
+- **Path**: `.claude/skills/ai-ceo-command-execution/SKILL.md`
 
-```
-AI-CEO Morning Digest -- {date}
-
-## Pending Approvals ({n} items)
-- [AQ-xxx] {department}: {description} | {file_path}
-...
-
-## Department Status Summary
-| Department | Status | Active Tasks | Notes |
-|------------|--------|-------------|-------|
-| Dev        | OK     | {task}      | {note}|
-...
-
-## Product Status
-| Product | Phase | Next Milestone |
-|---------|-------|----------------|
-...
-
-## Recommended Actions Today
-1. {recommendation}
-...
-```
-
-### /ai-ceo:status Flow
-- Simplified version of `/ai-ceo:morning`. Shows pending approvals + department status only
-
-### Approval Rules
-- `/ai-ceo:approve <id>`: Remove item from approval-queue.md, record in decisions/{month}.md
-- `/ai-ceo:reject <id> "reason"`: Remove from queue, record with reason in decisions, send back to department
+The skill loads only when an `/ai-ceo:*` command is invoked.
 
 ## Permission Control Rules
 
@@ -191,11 +139,4 @@ All actions follow thresholds defined in `.company/steering/permissions.md`.
 - 3 consecutive failures: Add escalation to `.company/approval-queue.md` and notify CEO
 - Error logs: Append to `.company/departments/{dept}/error-log.md`
 
-## Sub-Agent Delegation
-
-When delegating to a sub-agent, provide:
-1. **Task objective** -- What to achieve (one sentence)
-2. **Reference file paths** -- List of input file paths needed
-3. **Output destination** -- Output file path and format
-4. **Permission level** -- read-only / draft / execute
-5. **Quality criteria** -- Completion conditions and verification method
+(Sub-agent delegation template moved to `/ai-ceo-command-execution` skill.)
