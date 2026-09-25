@@ -1,7 +1,6 @@
 ---
 name: generate-cover
 description: Generate book cover images using HTML+CSS and Playwright screenshots. No external design tools needed. Usage: /generate-cover "book title"
-user_invocable: true
 ---
 
 # /generate-cover -- Book Cover Image Generation Skill

@@ -53,7 +53,7 @@ Each agent has a defined persona, expertise, workflows, output templates, and qu
 | **Morning Digest** | Daily Briefing | Collects all department states, generates CEO morning digest |
 | **Setup Wizard** | Onboarding | Interview-based setup, generates all initial config files |
 
-### 11 Skills (`skills/`)
+### 5 Skills (`skills/`)
 
 Reusable, invocable skill definitions that agents call to execute specific tasks.
 
@@ -212,8 +212,8 @@ your-project/
       cmo-agent.md
       ...
     skills/
-      validate-hypothesis.md         # 5 skill definitions
-      write-blog.md
+      validate-hypothesis/SKILL.md         # 5 skill definitions
+      write-blog/SKILL.md
       ...
   .company/
     VISION.md                        # Mission & vision

@@ -53,7 +53,7 @@ CEO1人。従業員ゼロ。経営チームはすべてClaude Codeが担う。
 | **Morning Digest** | デイリーブリーフィング | 全部門の状態を収集し、CEOへ朝のダイジェストを生成 |
 | **Setup Wizard** | オンボーディング | インタビュー形式のセットアップ、初期設定ファイルを自動生成 |
 
-### 11のスキル (`skills/`)
+### 5つのスキル (`skills/`)
 
 エージェントが特定のタスクを実行するために呼び出す、再利用可能なスキル定義。
 
@@ -212,8 +212,8 @@ your-project/
       cmo-agent.md
       ...
     skills/
-      validate-hypothesis.md         # 5つのスキル定義
-      write-blog.md
+      validate-hypothesis/SKILL.md         # 5つのスキル定義
+      write-blog/SKILL.md
       ...
   .company/
     VISION.md                        # ミッション・ビジョン

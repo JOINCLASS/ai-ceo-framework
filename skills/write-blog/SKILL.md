@@ -1,7 +1,6 @@
 ---
 name: write-blog
 description: Blog article creation skill. Optimized for SEO, engagement, and conversion. Only outputs articles scoring 75+ points. Usage: /write-blog "topic"
-user_invocable: true
 ---
 
 # /write-blog -- Blog Article Creation Skill

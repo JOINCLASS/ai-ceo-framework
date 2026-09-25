@@ -1,7 +1,6 @@
 ---
 name: upgrade-automation
 description: Detect new Claude Code features and upgrade your company's automation. Usage: /upgrade-automation
-user_invocable: true
 ---
 
 # /upgrade-automation -- Automation Upgrade Skill

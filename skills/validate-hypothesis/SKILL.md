@@ -1,7 +1,6 @@
 ---
 name: validate-hypothesis
 description: Business hypothesis validation skill. Validates ideas through 6 phases (origin check, market confirmation, interviews, evaluation, willingness to pay, minimum viable test, go/no-go decision). Usage: /validate-hypothesis "idea summary"
-user_invocable: true
 ---
 
 # /validate-hypothesis -- Business Hypothesis Validation Skill

@@ -1,7 +1,6 @@
 ---
 name: polish-content
 description: Polish existing blog articles to publishing-ready quality. Fixes structure, readability, CTAs, and scoring. Usage: /polish-content <article-file-path>
-user_invocable: true
 ---
 
 # /polish-content -- Content Polish Skill

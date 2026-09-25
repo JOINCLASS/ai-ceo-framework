@@ -100,7 +100,9 @@ cp "$SCRIPT_DIR/CLAUDE.md" ./CLAUDE.md
 cp "$SCRIPT_DIR/agents/"*.md .claude/agents/
 
 # Copy skills
-cp "$SCRIPT_DIR/skills/"*.md .claude/skills/
+# Claude Code reads skills as <name>/SKILL.md directories, not flat .md files.
+# Copying them flat leaves every skill silently unloaded.
+cp -R "$SCRIPT_DIR/skills/"* .claude/skills/
 
 # Copy steering files
 cp "$SCRIPT_DIR/steering/"*.md .company/steering/
