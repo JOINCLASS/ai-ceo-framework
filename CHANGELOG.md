@@ -7,6 +7,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [Unreleased]
 
 ### Fixed
+- **Skills were never loaded.** Claude Code reads skills as `skills/<name>/SKILL.md`
+  directories, but the framework shipped them as flat `.md` files and `setup.sh`
+  copied them flat. Every user who ran `setup.sh` ended up with five skills that
+  silently did nothing — including `validate-hypothesis`, which `CLAUDE.md`
+  requires before acting on a new initiative. Skills are now directories and
+  `setup.sh` copies them as such. Verified end-to-end: after `setup.sh`,
+  all five skills are listed by Claude Code.
+- Removed `user_invocable: true` from skill frontmatter (not a recognized key)
+- README (en/ja/zh-CN): the skills section claimed "11 Skills" while the header
+  claimed 5. There are five. Directory diagrams now show `<name>/SKILL.md`
 - setup.sh: `replace_placeholder` now only modifies framework files, not user's existing `.md` files
 - setup.sh: Added guard to prevent running inside the framework repo itself
 - setup.sh: Added missing `departments/tax` directory creation

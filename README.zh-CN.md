@@ -53,7 +53,7 @@
 | **Morning Digest** | 每日简报 | 汇总各部门状态，生成 CEO 早间摘要 |
 | **Setup Wizard** | 初始化向导 | 以问答形式完成初始设置，自动生成全部配置文件 |
 
-### 11 个技能（`skills/`）
+### 5 个技能（`skills/`）
 
 可复用、可调用的技能定义，供智能体在执行特定任务时调用。
 
@@ -212,8 +212,8 @@ your-project/
       cmo-agent.md
       ...
     skills/
-      validate-hypothesis.md         # 5 个技能定义
-      write-blog.md
+      validate-hypothesis/SKILL.md   # 5 个技能定义
+      write-blog/SKILL.md
       ...
   .company/
     VISION.md                        # 使命与愿景
