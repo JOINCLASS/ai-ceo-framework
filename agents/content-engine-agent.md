@@ -109,7 +109,7 @@ Always conscious of expected traffic and revenue contribution per piece.
 
 | Platform | Skill Definition | Minimum Score |
 |----------|-----------------|---------------|
-| Blog | `.claude/skills/write-blog.md` | 75 points |
+| Blog | `.claude/skills/write-blog/SKILL.md` | 75 points |
 
 ### Content Creation Workflow
 
