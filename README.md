@@ -8,22 +8,28 @@
 
 ## Run Your Entire Company with Claude Code
 
-**15 AI Agents + 5 Production Skills + Approval Pipeline. One-person company, fully automated.**
+**15 AI Agents + 5 Production Skills + Approval Pipeline. One-person company, mostly run by automation.**
 
 ---
 
-### Battle-Tested in Production
+### Running in Production
 
-This is not a toy project. AI-CEO Framework has been running a real company for over a year:
+AI-CEO Framework runs a real company. These are the figures we can check, as of 2026-11-11:
 
-| Metric | Value |
-|--------|-------|
-| Automation rate | **98%** of business operations |
-| Monthly cost | **~$250/month** (Claude Code Max + infrastructure) |
-| Departments managed | **11** (Dev, Marketing, Sales, Finance, Legal, CS, HR, Publishing, Growth, Consulting, BizDev) |
-| In production since | **2025** (1+ year) |
-| AI agents | **15** specialized agents |
-| Reusable skills | **5** production-tested skill definitions |
+| Metric | Value | How it is measured |
+|--------|-------|--------------------|
+| In production since | **2026-02-16** (about 9 months) | First commit in the operating repo |
+| Commits made by automation | **90%** (424 of 470) | Last 90 days, commits prefixed `auto:` |
+| Scheduled jobs | **32** | Active `launchd` agents |
+| Departments managed | **11** | Dev, Marketing, Sales, Finance, Legal, CS, HR, Publishing, Growth, Consulting, BizDev |
+| AI agents shipped here | **15** | Files in `agents/` |
+| Reusable skills shipped here | **5** | Directories in `skills/` |
+
+The running cost is a Claude Code Max plan plus metered usage for headless runs. The metered part is not fixed: it grew as we added automation.
+
+The operating company itself runs 17 agents and 13 skills. The extras are specific to our business (publishing pipelines, outbound sales) and are not distributed here.
+
+An earlier version of this README claimed "98% of business operations", "in production since 2025 (1+ year)" and "~$250/month". The 98% was never measured, and "since 2025" was wrong. They have been replaced with figures that can be checked.
 
 One CEO. Zero employees. Full C-suite powered by Claude Code.
 
@@ -300,7 +306,7 @@ Need help setting up AI-CEO Framework for your company? JoinClass LLC offers con
 
 ## What This Really Is
 
-This is not a prompt collection. It's a **production-grade operating system for running a company with AI**. Every agent, every workflow, every quality check was refined through 1+ year of daily use. The hypothesis validation skill alone has saved tens of thousands of dollars by killing bad ideas early.
+This is not a prompt collection. It's a **production-grade operating system for running a company with AI**. Every agent, every workflow, every quality check was refined through daily use since February 2026. The hypothesis validation skill is the one we rely on most: in August 2026 it was part of the decision to narrow the company to three businesses and shut down five products.
 
 This is the distilled experience of running an entire company with Claude Code -- the failures, the fixes, and the frameworks that survived.
 
