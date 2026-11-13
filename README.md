@@ -278,6 +278,12 @@ A: Built-in error handling: retry up to 3 times with feedback, then escalate to 
 
 ---
 
+## Learn the Background (Japanese)
+
+The operating record behind this framework is written up as a Japanese book: [Claude Codeで会社を動かす](https://zenn.dev/joinclass/books/claude-code-ai-ceo) (free chapters available on Zenn).
+
+---
+
 ## Professional Support
 
 Need help setting up AI-CEO Framework for your company? JoinClass LLC offers consulting services:

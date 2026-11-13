@@ -278,6 +278,12 @@ your-project/
 
 ---
 
+## 了解背景（日文书籍）
+
+本框架在真实公司中的运营记录已整理成一本日文书籍：[Claude Codeで会社を動かす](https://zenn.dev/joinclass/books/claude-code-ai-ceo)（Zenn 上有免费章节）。
+
+---
+
 ## 专业支持
 
 需要帮助为您的公司配置 AI-CEO Framework？JoinClass LLC 提供咨询服务：
