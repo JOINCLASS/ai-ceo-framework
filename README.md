@@ -286,13 +286,15 @@ The operating record behind this framework is written up as a Japanese book: [Cl
 
 ## Professional Support
 
+(Japan-based companies only)
+
 Need help setting up AI-CEO Framework for your company? JoinClass LLC offers consulting services:
 
 - **Free 30-min AI diagnosis** — We analyze your business operations and identify the top 3 areas where AI automation will have the biggest impact
 - **Custom setup** — We configure the framework for your specific business needs
 - **Ongoing support** — Monthly advisory for AI operations optimization
 
-[Book a free diagnosis →](https://joinclass.co.jp/#cta)
+[Book a free diagnosis →](https://joinclass.co.jp/?utm_source=github&utm_medium=readme&utm_campaign=dx-cta-2026-11#cta)
 
 ---
 
